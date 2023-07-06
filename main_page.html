@@ -2,30 +2,107 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        #logo-container {
+            text-align: center;
+        }
+        
+        #logo-image {
+            width: 75%;
+            height: auto;
+        }
+        body {
+            background-color: silver;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .dropdown {
+            text-align: right;
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+        .btn-primary {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .text-box {
+            border: 3px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-grow: 1;
+        }
+        .menu-bar {
+            border-top: 20px solid #000;
+            margin-top: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 1;
+        }
+        .menu-bar ul {
+            position: absolute;
+            right: 0;
+            z-index: 2; /* Added */
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+    </style>
 </head>
+    
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+    <div id="logo-container">
+        <img id="logo-image" src="https://buffaloprep.com/wp-content/uploads/2023/04/BuffPrep_Logo_Illumiating-Brilliance-1-1024x318.png.webp">
+    </div>
+    
+    <div class="menu-bar">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="page1.html">Page 1</a></li>
+                <li><a href="page2.html">Page 2</a></li>
+                <li><a href="page3.html"> Resources </a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
     
     <main>
         <section>
-            <h1>Welcome to My Website</h1>
-            <p>This is a simple HTML framework.</p>
+            <div class="container">
+                <div class="text-box">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to create a future where every student is empowered with the opportunity to pursue excellence and achieve success within a supportive community that nurtures their unique talents, aspirations, and personal growth. We are dedicated to harnessing the potential of AI in education, ensuring its safe andeffective integration to enhance learning outcomes. Through responsible implementation of AI technologies, we strive to provide students with personalized, inclusive, and engaging educational experiences, enabling them to thrive and reach their full potential in a rapidly evolving world.</p>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
+        <p>2023 Hackathon, Wilmington Team 27</p>
     </footer>
 </body>
 </html>
