@@ -9,6 +9,7 @@
     
     <style>
         body {
+            background-color: silver;
             text-align: center;
             font-size: 18px; /* Increase the font size */
         }
@@ -31,6 +32,21 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        .left-link {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .left-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-decoration: none;
+        }
         .center-link a {
             display: inline-block;
             padding: 10px 20px;
@@ -50,7 +66,7 @@
     
 <body>
     <h1>Frequently Asked Questions</h1>
-
+        <div class="menu-bar">  </div>
     <div class="faq">
         <div class="question">
             <h3>What is WIL-V27?</h3>
@@ -118,6 +134,9 @@
         <div class="center-link">
             <a href="page1.html">WIL-V27</a>
         </div>
+    </div>
+    <div class = "left-link">
+        <a href = "main_page.html"> Home </a>
     </div>
     <footer>
         <p>2023 Hackathon, Wilmington Team 27</p>
