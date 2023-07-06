@@ -8,6 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
         html, body {
             height: 100%;
             margin: 0;
@@ -90,7 +91,6 @@
             margin-top: auto;
             width: 100%;
         }
-        @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
     </style>   
 </head>
     
@@ -162,11 +162,11 @@
             <p>You can access the free service by acessing our website and following the instructions provided. In fact, you can click the link below to take you durectly to WIL-V27.</p>
         </div>
         <div class="center-link">
-            <a href="page1.html">WIL-V27</a>
+            <a href="{{ url_for('home') }}">WIL-V27</a>
         </div>
     </div>
     <div class = "left-link">
-        <a href = "main_page.html"> Home </a>
+        <a href = "{{ url_for('index') }}"> Home </a>
     </div>
     <footer>
         <p>2023 Hackathon, Wilmington Team 27</p>
