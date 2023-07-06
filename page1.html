@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-XnmX3jPWNCvzTCuv1LY45K/Pj0EDwGJWqKYTo/N1aMO3T3TV9zt5JmDr3SgqG7g8hvjLqQ8xiM4ESg64v/qH7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="chat-container">
+        <div class="conversation">
+            <!-- Conversation dialog boxes -->
+            <div class="chat-message bot-message">
+                <i class="fas fa-robot"></i>
+                <span>Hello! How can I assist you today?</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <!-- Text input field and submit button -->
+            <input type="text" id="user-input" class="input-field" placeholder="Type your message here" onkeydown="handleKeyDown(event)">
+            <button onclick="sendMessage()" class="submit-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+      // Function to send user message and display bot response
+      function sendMessage() {
+          var userInput = document.getElementById('user-input');
+          var userMessage = userInput.value.trim();
+  
+          if (userMessage === '') {
+              return; // Do not send empty messages
+          }
+  
+          // Append user message to conversation dialog
+          var conversation = document.querySelector('.conversation');
+          conversation.innerHTML += '<div class="chat-message user-message"><i class="fas fa-user"></i><span>' + userMessage + '</span></div>';
+
+          // Show typing animation
+          conversation.innerHTML += '<div class="chat-message bot-message typing-animation"><i class="fas fa-robot"></i><span>Typing...</span></div>';
+          
+          // Make an API call to the server to process user message and get bot response
+          fetch('/chat', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: 'user_message=' + encodeURIComponent(userMessage)
+          })
+          .then(response => response.json())
+          .then(data => {
+            // Remove typing animation
+            var typingElement = conversation.querySelector('.typing-animation');
+            if (typingElement) {
+              typingElement.remove();
+            }
+
+            // Append bot response to conversation dialog
+            conversation.innerHTML += '<div class="chat-message bot-message"><i class="fas fa-robot"></i><span>' + data.bot_response + '</span></div>';
+          })
+          .catch(error => {
+              console.log('Error:', error);
+          });
+  
+          // Clear the input field
+          userInput.value = '';
+      }
+  
+      // Function to handle keydown event and submit message on Enter key press
+      function handleKeyDown(event) {
+          if (event.keyCode === 13) {
+              event.preventDefault();
+              sendMessage();
+          }
+      }
+  </script>  
+</body>
+</html>

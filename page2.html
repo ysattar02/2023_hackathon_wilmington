@@ -7,18 +7,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        body {
-            background-color: silver;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            position: relative;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: azure;
         }
         .left-link {
+            position: absolute;
+            bottom: 60px; /* Adjust as needed */
+            left: 20px;
             display: flex;
             justify-content: left;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin: 20px;
         }
         .left-link a {
             display: inline-block;
@@ -27,18 +33,21 @@
             border-radius: 4px;
             text-decoration: none;
         }
+        .content {
+            flex: 1;
+        }
         footer {
             background-color: lightgrey;
             padding: 20px;
             text-align: center;
-            margin-top: auto;
-            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class = "left-link">
-        <a href = "main_page.html"> Home </a>
+    <div class="content">
+    </div>
+    <div class="left-link">
+        <a href="main_page.html">Home</a>
     </div>
     <footer>
         <p>2023 Hackathon, Wilmington Team 27</p>
