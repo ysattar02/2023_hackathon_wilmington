@@ -1,20 +1,29 @@
-/* Styles for chat container */
-.chat-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Styles for conversation dialog */
-.chat-message {
-  margin: 10px 0;
-  padding: 10px;
-  background: #f1f1f1;
+.navbar {
+  font-family: 'Raleway', sans-serif;
+}
+
+.info-section {
+  background-color: #f8f9fa;
   border-radius: 5px;
 }
 
-/* Styles for user and bot messages */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chat-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  position: relative;
+}
+
 .user-message {
   background: #007bff;
   color: white;
@@ -25,63 +34,37 @@
   color: white;
 }
 
-/* Styles for icons */
 .chat-message i {
   margin-right: 5px;
 }
 
-/* Styles for text input and submit button */
-.input-container {
-  margin-top: 10px;
-  display: flex;
-}
-
-.input-field {
-  flex: 1;
-  padding: 5px;
-}
-
 .submit-button {
-  padding: 5px 10px;
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-/* Animation for typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* Animation for typing effect */
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
+  width: 100%;
 }
 
 .typing-animation span::after {
   content: "";
   display: inline-block;
-  margin-left: 5px;
-  animation: typing 2s infinite;
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 50%;
+  animation: typing 1s infinite;
 }
 
-.typing-animation span {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
+@keyframes typing {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
-

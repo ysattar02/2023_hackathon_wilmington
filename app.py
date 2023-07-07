@@ -11,8 +11,8 @@ def index():
 def home():
     return render_template('page1.html')
 
-@app.route('/resources')
-def resources():
+@app.route('/plan')
+def plan():
     return render_template('page2.html')
 
 @app.route('/faqs')

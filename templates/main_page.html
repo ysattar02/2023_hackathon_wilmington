@@ -30,6 +30,7 @@
         margin: 0;
         padding: 0;
         font-family: 'Exo 2', sans-serif;
+        color: rgb(209, 200, 241);
     }
 
     .dropdown {
@@ -71,6 +72,15 @@
         flex-grow: 1;
     }
 
+    .info {
+        font-family: 'Exo 2', sans-serif;
+        color: rgb(209, 200, 241);
+    }
+
+    .banner_info {
+        text-align: center;
+    }
+
     .menu-bar {
         border-top: 20px solid #000;
         margin-top: 20px;
@@ -94,6 +104,23 @@
         margin-top: auto;
         width: 100%;
     }
+
+    .left-link {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+    .left-link a {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-decoration: none;
+    }
 </style>
 
 </head>
@@ -111,7 +138,7 @@
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li><a href="{{ url_for('home') }}">Wil-V27's Home</a></li>
-                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('plan') }}">Resources</a></li>
                 <li><a href="{{ url_for('faqs') }}">FAQ's</a></li>
             </ul>
         </div>
@@ -126,10 +153,78 @@
                 </div>
             </div>
         </section>
+
+            <br>
+            </br>
+            <div class="banner_info">
+                <h1>Artificial Intelligence Tools </h1>
+            </div>
+            
+            <section>
+            <div class="info">
+                <div class="row" id="Will Chatbot Description">
+                    <h2 style="text-align: center; margin-bottom: 25px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6134/6134346.png" style="width: 7%; height: 7%">
+                        <b>Will  -  Our very own chatbot!</b>
+                    </h2>
+
+                    <div class="col-sm-4">
+                        <p>Picture of chatbot</p>
+                    </div>
+
+
+                    <div class="col-sm-8" style="text-align:center; font-size: 17px; font-style: bold;">
+                        <p><span style="font-size:24px"><b>Introducing Will, Your Friendly AI Learning Assistant!</b></span><br>
+                            Will is a user-friendly chatbot designed to assist students and teachers in learning and understanding artificial intelligence (AI) concepts and how to effectively use AI tools. With Will's approachable and interactive interface, students and educators can explore the exciting world of AI with confidence and ease. Here's what Will brings to the table:</p>
+                        <ol>
+                            <li>Project Ideas and Guidance:
+                                Will assists students or teachers in brainstorming and developing exciting projects. Whether it's creating personalized guides or quizzes, Will can provide project ideas, step-by-step guidance, and valuable resources to support you.</li>
+                            <li>Ethical Considerations:
+                                Will emphasizes the importance of ethics in AI. Students and teachers will learn about ethical considerations in AI development and responsible use of AI technologies. Will promotes discussions on the social impact of AI and encourages ethical decision-making.</li>
+                            <li>Collaboration and Community:
+                                Will fosters a supportive learning community by facilitating collaboration among students and educators interested in AI. </li>
+                        </ol>
+                        <p>With Will as your AI learning assistant, you'll embark on an educational journey filled with exploration, knowledge, and practical application.</p>
+                    </div>
+                </div>
+                <h3 style="text-align: center; margin-top: 50px">Other helpful AI resources available: </h3>
+                <div class="row" id="CK-12 / Elicit AI">
+                    <div class="col-sm-6" style="text-align:center">
+                        <!-- <h3>CK-12</h3> -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/CK-12_Logo.svg/1200px-CK-12_Logo.svg.png"
+                            style="height: 35%;width: 35%; margin-bottom: 20px;">
+                        <p>CK-12 is an online educational platform that provides free, customizable educational resources for students and teachers. 
+            
+                            One of the features offered by CK-12 is the Flexi AI Chatbot/Tutor. This chatbot utilizes artificial intelligence to provide personalized assistance and support to students. It is designed to engage in interactive conversations, answer questions, and provide explanations on various topics. The Flexi AI Chatbot/Tutor adapts to the student's learning style and pace, providing customized recommendations and resources to help them learn effectively.</p>
+                    </div>
+                    <div class="col-sm-6" style="text-align:center">
+                        <h3 style="font-size: 60px;">Elicit AI</h3>
+                        <p>Elicit AI is an educational technology platform designed to support teachers and students in the learning process. It utilizes artificial intelligence and natural language processing to enhance educational experiences and provide personalized assistance.
+            
+                            For teachers, Elicit AI can help with lesson planning and curriculum development. It can analyze vast amounts of educational content and provide recommendations on the most effective teaching materials and strategies. The platform can also generate interactive and engaging learning activities, quizzes, and assessments that align with specific educational standards.</p>
+                    </div>
+                </div>
+                <div class="row" id="CK-12 / Elicit AI">
+                    <div class="col-sm-6" style="text-align:center">
+                        <!-- <h3>CK-12</h3> -->
+                        <img src="https://1000logos.net/wp-content/uploads/2020/10/Duolingo-logo.png"
+                            style="height: 35%;width: 35%; margin-bottom: 20px;">
+                        <p>Duolingo utilizes artificial intelligence (AI) to enhance language learning. Through adaptive learning, AI algorithms analyze users' performance, including correct and incorrect answers, response times, and progress. This data is used to dynamically adjust the difficulty level of exercises and provide personalized recommendations for further practice. Additionally, Duolingo incorporates AI-powered speech recognition technology, allowing users to practice speaking exercises. The AI system evaluates their pronunciation accuracy, fluency, and intonation in real-time, providing immediate feedback and suggestions for improvement. By adapting the learning experience and providing personalized feedback, Duolingo's AI technology helps users progress at their own pace and refine their language skills.</p>
+                    </div>
+                    <div class="col-sm-6" style="text-align:center">
+                        <img src="https://mcgrawect.princeton.edu/wp-content/uploads/2020/10/colab_lg.png" style="height:70%; width:70%;margin-top: 15px; margin-bottom: 30px;">
+                        <br><br>
+                        <p>Google Colab is a collaborative platform that empowers teachers to work with data effectively. It provides an interactive environment for teachers to upload, explore, and analyze datasets without requiring extensive coding knowledge. Teachers can easily manipulate and visualize data using user-friendly tools and libraries. They can uncover insights, create meaningful charts and graphs, and present their findings in a visually appealing manner. Google Colab also supports machine learning capabilities, allowing teachers to utilize pre-built models or build their own models using their datasets. By leveraging Google Colab, teachers can engage students in hands-on data analysis projects, fostering a deeper understanding of data concepts and enhancing their analytical skills.</p>
+                    </div>
+                </div>
+            
+            </div>
+ 
+        </section>
     </main>
     
     <footer>
-        <p>2023 Hackathon, Wilmington Team 27</p>
+        <p style="color:black">2023 Hackathon, Wilmington Team 27</p>
     </footer>
 </body>
 </html>
